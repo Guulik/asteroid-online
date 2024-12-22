@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Stalopxasine_SteamSettings
   m_EditorClassIdentifier: 
   applicationId:
-    m_AppId: 2566550
+    m_AppId: 480
   callbackTick_Milliseconds: 15
   isDebugging: 0
   server:

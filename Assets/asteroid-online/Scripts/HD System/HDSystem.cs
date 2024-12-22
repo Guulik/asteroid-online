@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using FishNet.Object;
 
 public class HDSystem : MonoBehaviour
 {
@@ -19,6 +20,7 @@ public class HDSystem : MonoBehaviour
     
     public void TakeDamage(float Damage)
     {
+        Debug.Log(gameObject.name);
         CurrentHealth -= Damage;
 
         if (CurrentHealth <= 0)
@@ -26,7 +28,7 @@ public class HDSystem : MonoBehaviour
             Destroy(gameObject);
         }
     }
-
+    
     protected void OnCollisionEnter(Collision other)
     {
         if(other.gameObject.CompareTag("Untagged")) //Ну это тоже фигня так-то
