@@ -37,8 +37,8 @@ public class SpawnManager : SingletonNetworkBehavior<SpawnManager>
         if (dollObject.TryGetComponent(out Doll doll))
         {
             player.SetDollServerRpc(doll);
-            doll.DollAttack.SetPlayerOwner(player);
-            doll.DollHealth.SetPlayerOwner(player);
+            //doll.DollAttack.SetPlayerOwner(player);
+            //doll.DollHealth.SetPlayerOwner(player);
         }
 
         // Обновляем имя куклы у всех клиентов
@@ -71,7 +71,7 @@ public class SpawnManager : SingletonNetworkBehavior<SpawnManager>
         if (player.Doll != null)
         {
             player.Doll.transform.position = positionToRespawn;
-            player.Doll.DollHealth.Rejuvenate();
+            //player.Doll.DollHealth.Rejuvenate();
             player.Doll.SyncDollPosition(positionToRespawn);
         }
     }
